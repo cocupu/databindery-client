@@ -1,8 +1,9 @@
 module Cocupu
   class Node
-    attr_accessor :values, :conn
+    attr_accessor :values
+    attr_reader :conn
     def initialize(values)
-      self.conn = Thread.current[:cocupu_connection] 
+      @conn = Thread.current[:cocupu_connection] 
       self.values = values
     end
 
@@ -50,6 +51,12 @@ module Cocupu
         self.url = response['url']
       end
       values
+    end
+
+    def attach_file(file_name, file)
+      raise RuntimeError "You can't attach a file to an object that hasn't been persisted" unless persistent_id
+      Cocupu::File.new(self, file_name, file)
+
     end
 
   end

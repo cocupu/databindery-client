@@ -49,11 +49,15 @@ describe Cocupu do
   end
 
   describe "attach a file to the node" do
+    before do
+      FakeWeb.register_uri(:post, 'http://localhost:3001/my_id/my_pool/nodes/909877/files.json?auth_token=112312', :body=>"{\"persistent_id\":\"909877\",\"url\":\"http://foo.bar/\"}", :content_type => "text/json")
+      @node = Cocupu::Node.new({'identity'=>@identity, 'pool'=>@pool, 'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}})
+      @node.persistent_id = '909877'
+      @node.url = "/#{@identity}/#{@pool}/nodes/909877"
+    end
     it "should be successful" do
-      node = Cocupu::Node.new({'identity'=>@identity, 'pool'=>@pool, 'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}})
-      node.save
-      node.persistent_id.should == '909877'
-      node.url.should == 'http://foo.bar/'
+      file = @node.attach_file('my_file_name', File.open('./spec/unit/cocupu_spec.rb'))
+      file.save
     end
 
   end

@@ -1,13 +1,14 @@
 #!/usr/bin/env ruby
 
-require 'httparty'
+require 'httmultiparty'
 require 'cocupu/identity'
 require 'cocupu/model'
 require 'cocupu/node'
+require 'cocupu/file'
 
 module Cocupu
   class Connection
-    include HTTParty
+    include HTTMultiParty
     attr_accessor :token, :host, :port
 
     def initialize(email, password, port=80, host='localhost')
