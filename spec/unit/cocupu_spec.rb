@@ -4,9 +4,21 @@ describe Cocupu do
 
   before do
     FakeWeb.register_uri(:post, "http://localhost:3001/api/v1/tokens", :body => "{\"token\":\"112312\"}", :content_type => "text/json")
-    Cocupu.start('justin@cocupu.com', 'password', 3001, 'localhost')
+    @conn = Cocupu.start('justin@cocupu.com', 'password', 3001, 'localhost')
     @identity = 'my_id'
     @pool = 'my_pool'
+  end
+
+  describe "get pool list" do
+    before do
+      FakeWeb.register_uri(:get, "http://localhost:3001/identities?auth_token=112312", :body=>"[{\"url\":\"/identity/1234\",\"short_name\":\"fred\"},{\"url\":\"/identity/5677\",\"short_name\":\"my_id\"}]", :content_type => "text/json")
+      FakeWeb.register_uri(:get, "http://localhost:3001/identity/5677.json?auth_token=112312", :body=>"[{\"short_name\":\"kiddy_pool\"}]", :content_type => "text/json")
+    end
+    it "should be successful" do
+      pools = @conn.identity('my_id').pools
+      pools.size.should == 1
+      pools.first.short_name.should == 'kiddy_pool'
+    end
   end
 
   describe "creating a new model" do

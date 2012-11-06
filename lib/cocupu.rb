@@ -2,6 +2,7 @@
 
 require 'httmultiparty'
 require 'cocupu/identity'
+require 'cocupu/pool'
 require 'cocupu/model'
 require 'cocupu/node'
 require 'cocupu/file'
@@ -39,7 +40,7 @@ module Cocupu
       return @identities if @identities
       response = self.class.get("http://#{host}:#{port}/identities?auth_token=#{token}")
       raise "Error getting identities: #{response}" unless response.code == 200
-      @identities = response.map {|val| Identity.new(val, self)}
+      @identities = response.map {|val| Identity.new(val)}
     end
 
     def identity(short_name)
