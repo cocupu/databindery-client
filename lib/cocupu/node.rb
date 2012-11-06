@@ -54,7 +54,7 @@ module Cocupu
     end
 
     def attach_file(file_name, file)
-      raise RuntimeError "You can't attach a file to an object that hasn't been persisted" unless persistent_id
+      raise RuntimeError, "You can't attach a file to an object that hasn't been persisted" unless persistent_id
       Cocupu::File.new(self, file_name, file)
 
     end
