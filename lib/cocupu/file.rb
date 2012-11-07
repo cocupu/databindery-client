@@ -14,7 +14,7 @@ module Cocupu
     end
 
     def save
-      response = conn.post("#{url}.json")#, query: {file_name: file_name, file: file})
+      response = conn.post("#{url}.json", query: {file_name: file_name, file: file})
       raise "Error saving file: #{response.inspect}" unless response.code >= 200 and response.code < 300
     end
   end
