@@ -20,7 +20,7 @@ module Cocupu
       response = conn.get("#{url}/models.json")
       #puts "RESP: #{response}"
       raise "Error getting models: #{response}" unless response.code == 200
-      @pools = response.map {|val| Model.new(val, conn)}
+      @pools = response.map {|val| Model.new(val)}
     end
   end
 end
