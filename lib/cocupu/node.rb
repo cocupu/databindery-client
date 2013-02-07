@@ -15,7 +15,7 @@ module Cocupu
       conn = Thread.current[:cocupu_connection] 
       identity = values["identity"]
       pool = values["pool"]
-      response = conn.post("/#{identity}/#{pool}/find_or_create.json", body: {node: values["node"]})
+      response = conn.post("/#{identity}/#{pool}/nodes/find_or_create.json", body: {node: values["node"]})
       raise "Error trying to find_or_create node: #{response.inspect}" unless response.code >= 200 and response.code < 300
       if (response['persistent_id'])
         result = self.new(response)
@@ -46,9 +46,21 @@ module Cocupu
     def persistent_id=(id)
       values['persistent_id'] = id
     end
-
+    
     def associations=(associations)
       values['associations'] = associations
+    end
+    
+    def associations
+      values['associations']
+    end
+    
+    def data=(data)
+      values["data"] = data
+    end
+        
+    def data
+      values["data"]
     end
 
     def persistent_id
