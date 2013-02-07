@@ -6,6 +6,22 @@ module Cocupu
       @conn = Thread.current[:cocupu_connection] 
       self.values = values
     end
+    
+    # Find or Create
+    # @return Node
+    # @example
+    #   Cocupu::Node.find_or_create{'identity'=>"5", 'pool'=>"216", "node" => {'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}} }
+    def self.find_or_create(values)
+      conn = Thread.current[:cocupu_connection] 
+      identity = values["identity"]
+      pool = values["pool"]
+      response = conn.post("/#{identity}/#{pool}/find_or_create.json", body: {node: values["node"]})
+      raise "Error trying to find_or_create node: #{response.inspect}" unless response.code >= 200 and response.code < 300
+      if (response['persistent_id'])
+        result = self.new(response)
+      end
+      result
+    end
 
     def model_id
       values['model_id']

@@ -59,6 +59,17 @@ describe Cocupu do
       node.url.should == 'http://foo.bar/'
     end
   end
+  
+  describe "find_or_create on Node" do
+    before do
+      FakeWeb.register_uri(:post, 'http://localhost:3001/my_id/my_pool/find_or_create.json?auth_token=112312', :body=>"{\"persistent_id\":\"909877\",\"url\":\"http://foo.bar/\"}", :content_type => "text/json")
+    end
+    it "should be successful" do
+      node = Cocupu::Node.find_or_create({'identity'=>@identity, 'pool'=>@pool, "node" => {'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}} })
+      node.persistent_id.should == '909877'
+      node.url.should == 'http://foo.bar/'
+    end
+  end
 
   describe "attach a file to the node" do
     before do
