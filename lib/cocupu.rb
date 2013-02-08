@@ -20,8 +20,8 @@ module Cocupu
       self.token = response["token"]
     end
 
-    def get(path)
-        self.class.get(request_url(path))
+    def get(path, params={}, args={})
+        self.class.get(request_url(path, params), args)
     end
 
     def put(path, args={})
@@ -32,10 +32,15 @@ module Cocupu
         self.class.post(request_url(path), args)
     end
 
-    def request_url(path)
-      "http://#{host}:#{port}#{path}?auth_token=#{token}"
+    def request_url(path, params={})
+      params["auth_token"] = token
+      "http://#{host}:#{port}#{path}?#{url_params(params)}"
     end
 
+    def url_params(params)
+      params.map {|k,v| "#{k.to_s}=#{v}"}.join("&")
+    end
+    
     def identities
       return @identities if @identities
       response = self.class.get("http://#{host}:#{port}/identities?auth_token=#{token}")

@@ -5,6 +5,24 @@ module Cocupu
       self.conn = Thread.current[:cocupu_connection] 
       self.values = values
     end
+    
+    def self.find(identity, pool, args)      
+      unless args == :all
+        raise Exception "Cocupu::Model.find only supports one use case - find all. Try Cocupu::Model.find(identity, pool, :all)."
+      end
+      conn = Thread.current[:cocupu_connection]
+      url = "/#{identity}/#{pool}/models.json"
+      models_json = JSON.parse(conn.get(url).body)
+      models = models_json.map {|json| Cocupu::Model.new(json) }
+      return models
+    end
+    
+    def self.load(id)
+      conn = Thread.current[:cocupu_connection]
+      url = "/models/#{id}.json"
+      json = JSON.parse(conn.get(url).body)
+      return Cocupu::Model.new(json)
+    end
 
     def name
       values['name']
@@ -37,9 +55,17 @@ module Cocupu
     def fields=(fields)
       values['fields'] = fields
     end
+    
+    def fields
+      values['fields']
+    end
 
     def associations=(fields)
       values['associations'] = fields
+    end
+    
+    def associations
+      values['associations']
     end
 
     def id

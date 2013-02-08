@@ -7,10 +7,22 @@ module Cocupu
       self.values = values
     end
     
+    # Find
+    # @return Array of Cocupu::Nodes
+    # @example
+    #   Cocupu::Node.find{"my_identity", "pool_20", {'model_id' => 22} }
+    def self.find(identity, pool, query_params)
+      conn = Thread.current[:cocupu_connection]
+      url = "/#{identity}/#{pool}/nodes/search.json"
+      nodes_json = JSON.parse(conn.get(url,query_params).body)
+      nodes = nodes_json.map {|json| Cocupu::Node.new(json) }
+      return nodes
+    end
+    
     # Find or Create
     # @return Node
     # @example
-    #   Cocupu::Node.find_or_create{'identity'=>"5", 'pool'=>"216", "node" => {'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}} }
+    #   Cocupu::Node.find_or_create{'identity'=>"my_identity", 'pool'=>"pool_20", "node" => {'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}} }
     def self.find_or_create(values)
       conn = Thread.current[:cocupu_connection] 
       identity = values["identity"]
@@ -69,7 +81,7 @@ module Cocupu
 
     def save
       response = if persistent_id
-        conn.put("#{url}.json", body: {node: values})
+        conn.put("#{url}/#{persistent_id}.json", body: {node: values})
       else
         conn.post("#{url}.json", body: {node: values})
       end
