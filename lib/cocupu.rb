@@ -6,6 +6,7 @@ require 'cocupu/pool'
 require 'cocupu/model'
 require 'cocupu/node'
 require 'cocupu/file'
+require 'cocupu/curator'
 
 module Cocupu
   class Connection
