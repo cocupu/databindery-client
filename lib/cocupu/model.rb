@@ -27,9 +27,29 @@ module Cocupu
     def name
       values['name']
     end
+    
+    def name=(name)
+      values['name'] = name
+    end
 
     def label=(label)
       values['label'] = label
+    end
+    
+    def label
+      values['label'] 
+    end
+    
+    def allow_file_bindings=(boolean)
+      values['allow_file_bindings'] = boolean
+    end
+    
+    def allow_file_bindings
+      values['allow_file_bindings'] 
+    end
+    
+    def allows_file_bindings?
+      allow_file_bindings
     end
 
     def identity
