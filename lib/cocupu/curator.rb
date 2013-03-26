@@ -21,13 +21,13 @@ module Cocupu
         v.nil? || v.empty?
       end
       source_field_values.each do |value_to_spawn|
-        puts "VALUE: #{value_to_spawn}, added as \{#{association_code}: #{sn.associations[association_code]}\}"
+        puts "VALUE: #{value_to_spawn}"
         destination_node_data = {destination_field_name=>value_to_spawn}
         destination_node = Cocupu::Node.find_or_create("identity"=>identity_id, "pool"=>pool_id, "node" => {"model_id"=>destination_model_id, "data"=>destination_node_data})
         source_nodes_to_process = source_nodes.select {|sn| sn.data[source_field_name] == value_to_spawn}
         source_nodes_to_process.each do |sn|
           sn.associations[association_code] = [destination_node.persistent_id]
-          puts "    #{sn.persistent_id}"
+          puts "    #{sn.persistent_id} #{association_code}: #{sn.associations[association_code]}"
           if opts[:delete_source_value] == true
             sn.values["data"].delete(source_field_name)
           end
