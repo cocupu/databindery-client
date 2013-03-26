@@ -80,8 +80,9 @@ module Cocupu
     end
 
     def save
-      response = if persistent_id
-        conn.put("#{url}/#{persistent_id}.json", body: {node: values})
+      response = if persistent_id 
+        self.url = "#{url}/#{persistent_id}" unless self.url.include?(persistent_id)
+        conn.put("#{url}.json", body: {node: values})
       else
         conn.post("#{url}.json", body: {node: values})
       end
