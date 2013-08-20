@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'httmultiparty'
+require 'active_support/core_ext/object/to_param'
+require 'active_support/core_ext/object/to_query'
 require 'cocupu/identity'
 require 'cocupu/pool'
 require 'cocupu/model'
@@ -39,9 +41,9 @@ module Cocupu
     end
 
     def url_params(params)
-      params.map {|k,v| "#{k.to_s}=#{v}"}.join("&")
+      params.respond_to?(:to_param) ? params.to_param : params
     end
-    
+
     def identities
       return @identities if @identities
       response = self.class.get("http://#{host}:#{port}/identities?auth_token=#{token}")
