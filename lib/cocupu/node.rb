@@ -64,6 +64,14 @@ module Cocupu
       result
     end
 
+    def self.import(values)
+      conn = Thread.current[:cocupu_connection]
+      identity = values["identity"]
+      pool = values["pool"]
+      model_id = values["model_id"]
+      response = conn.post("/#{identity}/#{pool}/nodes/import.json", body: {model_id:model_id, data: values["data"]})
+    end
+
     def model_id
       values['model_id']
     end
