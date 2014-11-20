@@ -24,6 +24,22 @@ module Cocupu
       return Cocupu::Model.new(json)
     end
 
+    def convert_data_keys(data_to_convert)
+      converted_data = []
+      data_as_array = data_to_convert.kind_of?(Array) ? data_to_convert : [data_to_convert]
+      data_as_array.each do |data_hash|
+        new_data = data_hash.dup
+        fields.each do |field|
+          field_code = field["code"]
+          id_string = field["id"]
+          new_data[id_string] = new_data.delete(field_code) unless new_data[field_code].nil?
+        end
+        converted_data << new_data
+      end
+      converted_data = converted_data.first unless data_to_convert.kind_of? Array
+      return converted_data
+    end
+
     def name
       values['name']
     end
