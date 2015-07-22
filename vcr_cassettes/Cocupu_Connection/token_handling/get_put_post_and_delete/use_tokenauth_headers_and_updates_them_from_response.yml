@@ -1,0 +1,269 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/auth/sign_in.json
+    body:
+      encoding: UTF-8
+      string: email=justin%40cocupu.com&password=password
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Token:
+      - signin-token-#auth
+      Token-Type:
+      - Bearer
+      Client:
+      - client-id-#auth
+      Expiry:
+      - expiry-#auth
+      Uid:
+      - padma@cocupu.com
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4d0d17d523d25989485843a82fab2055"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 29662b24-ff4b-43ec-bed0-e8321c54afd2
+      X-Runtime:
+      - '0.243931'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 00:17:49 GMT
+      Content-Length:
+      - '131'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":1,"provider":"email","uid":"padma@cocupu.com","name":null,"nickname":null,"image":null,"email":"padma@cocupu.com"}}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 00:17:49 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/pools
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Access-Token:
+      - signin-token-#auth
+      Client:
+      - client-id-#auth
+      Uid:
+      - padma@cocupu.com
+      Expiry:
+      - expiry-#auth
+  response:
+    status:
+      code: 422
+      message: 'Unprocessable Entity '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Token:
+      - signin-token-#post
+      Token-Type:
+      - Bearer
+      Client:
+      - client-id-#post
+      Expiry:
+      - expiry-#post
+      Uid:
+      - padma@cocupu.com
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4d0d17d523d25989485843a82fab2055"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4078fb15-f6c2-4e93-aa10-63b3fc7de556
+      X-Runtime:
+      - '0.245007'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 00:02:49 GMT
+      Content-Length:
+      - '131'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: Unprocessable Entity
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 00:17:49 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/pools/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - signin-token-#post
+      Client:
+      - client-id-#post
+      Uid:
+      - padma@cocupu.com
+      Expiry:
+      - expiry-#post
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Access-Token:
+      - signin-token-#get
+      Client:
+      - client-id-#get
+      Uid:
+      - padma@cocupu.com
+      Expiry:
+      - expiry-#get
+    body:
+      encoding: UTF-8
+      string: '{"id":2}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 00:30:58 GMT
+- request:
+    method: put
+    uri: http://localhost:3001/api/v1/pools/2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Access-Token:
+      - signin-token-#get
+      Client:
+      - client-id-#get
+      Uid:
+      - padma@cocupu.com
+      Expiry:
+      - expiry-#get
+  response:
+    status:
+      code: 401
+      message: 'Unauthorized '
+    headers:
+      Access-Token:
+      - signin-token-#put
+      Client:
+      - client-id-#put
+      Uid:
+      - padma@cocupu.com
+      Expiry:
+      - expiry-#put
+    body:
+      encoding: UTF-8
+      string: '{"id":2}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 18:01:13 GMT
+- request:
+    method: delete
+    uri: http://localhost:3001/api/v1/pools/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - signin-token-#put
+      Client:
+      - client-id-#put
+      Uid:
+      - padma@cocupu.com
+      Expiry:
+      - expiry-#put
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Access-Token:
+      - signin-token-#delete
+      Client:
+      - client-id-#delete
+      Uid:
+      - padma@cocupu.com
+      Expiry:
+      - expiry-#delete
+    body:
+      encoding: UTF-8
+      string: '{"message":"Deleted"}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 18:02:09 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/auth/sign_in.json
+    body:
+      encoding: UTF-8
+      string: email=justin%40cocupu.com&password=password
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Token:
+      - signin-token-#auth
+      Token-Type:
+      - Bearer
+      Client:
+      - client-id-#auth
+      Expiry:
+      - expiry-#auth
+      Uid:
+      - justin@cocupu.com
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4d0d17d523d25989485843a82fab2055"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ea25bad8-4265-49f0-ac21-20bccd3b6bc0
+      X-Runtime:
+      - '0.421113'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 21:20:45 GMT
+      Content-Length:
+      - '131'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":1,"provider":"email","uid":"justin@cocupu.com","name":null,"nickname":null,"image":null,"email":"justin@cocupu.com"}}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 21:20:45 GMT
+recorded_with: VCR 2.9.3

@@ -6,6 +6,12 @@ module Cocupu
       @conn = Thread.current[:cocupu_connection] 
       self.values = values
     end
+
+    def self.create(values)
+      node = Cocupu::Node.new(values)
+      node.save
+      node
+    end
     
     # Find
     # @return Array of Cocupu::Nodes
@@ -13,7 +19,7 @@ module Cocupu
     #   Cocupu::Node.find{"my_identity", "pool_20", {'model_id' => 22} }
     def self.find(identity, pool, query_params)
       conn = Thread.current[:cocupu_connection]
-      url = "/#{identity}/#{pool}/search.json"
+      url = "/#{pool}/search.json"
       query_hash = query_params_to_refine_multi_query(query_params)
       query_hash[:marshall_nodes] = true
       #nodes_json = JSON.parse(conn.get(url,query_hash).body)
@@ -51,12 +57,11 @@ module Cocupu
     # Find or Create
     # @return Node
     # @example
-    #   Cocupu::Node.find_or_create{'identity'=>"my_identity", 'pool'=>"pool_20", "node" => {'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}} }
+    #   Cocupu::Node.find_or_create{'pool_id'=>"pool_20", "node" => {'model_id' => 22, 'data' => {'file_name'=>'my file.xls'}} }
     def self.find_or_create(values)
       conn = Thread.current[:cocupu_connection] 
-      identity = values["identity"]
-      pool = values["pool"]
-      response = conn.post("/#{identity}/#{pool}/nodes/find_or_create.json", body: {node: values["node"]})
+      pool_id = values["pool_id"]
+      response = conn.post("/pools/#{pool_id}/nodes/find_or_create.json", body: {node: values["node"]})
       raise "Error trying to find_or_create node: #{response.inspect}" unless response.code >= 200 and response.code < 300
       if (response['persistent_id'])
         result = self.new(response)
@@ -77,19 +82,23 @@ module Cocupu
     end
 
     def identity
-      values['identity']
+      values['identity_id']
     end
 
     def pool
-      values['pool']
+      values['pool_id']
     end
 
     def url
-      values['url'] || "/#{identity}/#{pool}/nodes"
+      values['url'] ||= id ? "/pools/#{pool}/nodes/#{id}" : "/pools/#{pool}/nodes"
     end
 
     def url=(url)
       values['url'] = url
+    end
+
+    def id
+      values['node_version_id']
     end
 
     def persistent_id=(id)
@@ -134,7 +143,6 @@ module Cocupu
     def attach_file(file_name, file)
       raise RuntimeError, "You can't attach a file to an object that hasn't been persisted" unless persistent_id
       Cocupu::File.new(self, file_name, file)
-
     end
 
   end

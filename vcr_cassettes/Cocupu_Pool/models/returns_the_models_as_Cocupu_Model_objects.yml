@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/auth/sign_in.json
+    body:
+      encoding: UTF-8
+      string: email=justin%40cocupu.com&password=password
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Token:
+      - paXZcCFtc9bfFQ5huS5DzA
+      Token-Type:
+      - Bearer
+      Client:
+      - GvT5ELRJoo9TIaD_PrBBBA
+      Expiry:
+      - '1438738843'
+      Uid:
+      - justin@cocupu.com
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4d0d17d523d25989485843a82fab2055"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ada458d9-105a-4c2d-af5e-b5317b2fee80
+      X-Runtime:
+      - '0.246903'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 01:40:43 GMT
+      Content-Length:
+      - '131'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":1,"provider":"email","uid":"justin@cocupu.com","name":null,"nickname":null,"image":null,"email":"justin@cocupu.com"}}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 01:40:43 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/pools/2/models.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - paXZcCFtc9bfFQ5huS5DzA
+      Client:
+      - GvT5ELRJoo9TIaD_PrBBBA
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438738843'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"9f1c39b9a6ae742f98520a419d49d522"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 85e6236e-68ad-4241-8667-2c69c3e7d8e5
+      X-Runtime:
+      - '0.110105'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 01:40:44 GMT
+      Content-Length:
+      - '1613'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":36,"url":"/models/36","associations":[],"fields":[{"name":"Collection Name","type":"text","uri":"","code":"collection_name"},{"name":"Collection Location","type":"text","uri":"","code":"collection_location"},{"name":"Program Title - english","type":"text","uri":"","code":"program_title_english"},{"name":"Date from","type":"date","uri":"","code":"date_from"},{"name":"Date to","type":"date","uri":"","code":"date_to"},{"name":"Restricted?","type":"text","uri":"","code":"restricted"},{"name":"Copy or Original","type":"text","uri":"","code":"copy_or_original"},{"name":"Translation Languages","type":"text","uri":"","code":"translation_languages"},{"name":"Media","type":"text","uri":"","code":"media_type"},{"name":"# of Media","type":"text","uri":"","code":"number_of_media"},{"name":"Notes","type":"text_area","uri":"","code":"notes"},{"name":"Post-digi Notes","type":"text_area","uri":"","code":"post_digi_notes"}],"name":"Program","label":"program_title_english","pool":"marpa_test3","identity":"matt_zumwalt"},{"id":35,"url":"/models/35","associations":[],"fields":[{"name":"Location Name","type":"text","uri":"","code":"location_name"},{"name":"City State","type":"text","uri":"","code":"city_state"}],"name":"Location","label":"location_name","pool":"marpa_test3","identity":"matt_zumwalt"},{"id":34,"url":"/models/34","associations":[],"fields":[{"name":"Title - wylie","type":"text","uri":"","code":"title_wylie"},{"name":"Title - english","type":"text","uri":"","code":"title_english"},{"name":"Title - tibetan","type":"text","uri":"","code":"title_tibetan"}],"name":"Song","label":"title_english","pool":"marpa_test3","identity":"matt_zumwalt"},{"id":33,"url":"/models/33","associations":[],"fields":[{"name":"Title - wylie","type":"text","uri":"","code":"title_wylie"},{"name":"Title - english","type":"text","uri":"","code":"title_english"},{"name":"Title contractions","type":"text","uri":"","code":"title_contractions"},{"name":"Title - sanskrit","type":"text","uri":"","code":"title_sanskrit"},{"name":"Title - tibetan","type":"text","uri":"","code":"title_tibetan"}],"name":"Text","label":"title_english","pool":"marpa_test3","identity":"matt_zumwalt"},{"id":32,"url":"/models/32","associations":[],"fields":[{"name":"Name","type":"text","uri":"","code":"name"},{"name":"Code","type":"text","uri":"","code":"code"}],"name":"Contributor","label":"name","pool":"marpa_test3","identity":"matt_zumwalt"},{"id":1,"url":"/models/1","associations":[],"fields":[{"code":"file_name","type":"textfield"}],"name":"File Entity","label":"file_name"}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 01:40:44 GMT
+recorded_with: VCR 2.9.3

@@ -13,6 +13,10 @@ module Cocupu
       values["url"]
     end
 
+    def id
+      values["id"]
+    end
+
     def models
       return @models if @models
       # req_url = "http://#{host}:#{port}#{url}/models.json?auth_token=#{token}"

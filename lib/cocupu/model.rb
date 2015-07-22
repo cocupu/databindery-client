@@ -5,6 +5,12 @@ module Cocupu
       self.conn = Thread.current[:cocupu_connection] 
       self.values = values
     end
+
+    def self.create(values)
+      model = Cocupu::Model.new(values)
+      model.save
+      model
+    end
     
     def self.find(identity, pool, args)      
       unless args == :all
@@ -53,7 +59,15 @@ module Cocupu
     end
     
     def label
-      values['label'] 
+      values['label']
+    end
+
+    def label_field_id=(label_field_id)
+      values['label_field_id'] = label_field_id
+    end
+
+    def label_field_id
+      values['label_field_id']
     end
     
     def allow_file_bindings=(boolean)
@@ -69,15 +83,15 @@ module Cocupu
     end
 
     def identity
-      values['identity']
+      values['identity_id']
     end
 
     def pool
-      values['pool']
+      values['pool_id']
     end
 
     def url
-      values['url'] || "/#{identity}/#{pool}/models"
+      values['url'] ||= id ? "/pools/#{pool}/models/#{id}" : "/pools/#{pool}/models"
     end
 
     def url=(url)
@@ -109,7 +123,6 @@ module Cocupu
     end
 
     def save
-      #req_url = "http://#{host}:#{port}#{url}.json?auth_token=#{token}"
       response = if id
         conn.put("#{url}.json", body: {model: values})
       else

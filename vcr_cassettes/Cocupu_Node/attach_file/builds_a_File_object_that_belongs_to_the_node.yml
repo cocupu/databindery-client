@@ -1,0 +1,262 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/auth/sign_in.json
+    body:
+      encoding: UTF-8
+      string: email=justin%40cocupu.com&password=password
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Token:
+      - lkj0NpEb9Vs2vEGciqLe9w
+      Token-Type:
+      - Bearer
+      Client:
+      - 5VL0BdUZ8EJc5OjloTjfBg
+      Expiry:
+      - '1438799595'
+      Uid:
+      - justin@cocupu.com
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4d0d17d523d25989485843a82fab2055"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 61c1a272-3d52-417e-ae24-82d9b3b9129e
+      X-Runtime:
+      - '0.419848'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 18:33:15 GMT
+      Content-Length:
+      - '131'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":1,"provider":"email","uid":"justin@cocupu.com","name":null,"nickname":null,"image":null,"email":"justin@cocupu.com"}}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 18:33:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/identities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - lkj0NpEb9Vs2vEGciqLe9w
+      Client:
+      - 5VL0BdUZ8EJc5OjloTjfBg
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438799595'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1a3d10b744ff501f59c201cae9073195"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3611423c-03a0-488c-9677-d37709b0af60
+      X-Runtime:
+      - '0.158412'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 18:33:15 GMT
+      Content-Length:
+      - '149'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":null,"created_at":"2015-07-21T22:57:47.512Z","updated_at":"2015-07-21T22:57:47.512Z","short_name":null,"url":"/api/v1/identities/1"}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 18:33:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/pools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - lkj0NpEb9Vs2vEGciqLe9w
+      Client:
+      - 5VL0BdUZ8EJc5OjloTjfBg
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438799595'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"a6fa60af519c2ad599cd2412f36b5d08"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 31cb6c23-3048-4820-863e-96a010c11b6a
+      X-Runtime:
+      - '0.186501'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 18:33:15 GMT
+      Content-Length:
+      - '108'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":2,"short_name":"kiddie_pool","name":null,"description":null,"identity":null,"url":"/api/v1/pools/2"}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 18:33:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/pools/2/models.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - lkj0NpEb9Vs2vEGciqLe9w
+      Client:
+      - 5VL0BdUZ8EJc5OjloTjfBg
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438799595'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1d8d0c128ab4bc03175806b1b4509d67"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6a4eb1c4-552b-4df7-9718-02dc6b82d785
+      X-Runtime:
+      - '0.364956'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 18:33:16 GMT
+      Content-Length:
+      - '4527'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":2,"url":"/api/v1/models/2","association_fields":[],"fields":[{"id":8,"name":"File
+        Name","uri":"","code":"file_name","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.813Z","updated_at":"2015-07-22T02:41:46.813Z","references":null,"type":"TextField"},{"id":9,"name":"Tibetan
+        Title","uri":"","code":"tibetan_title","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.843Z","updated_at":"2015-07-22T02:41:46.843Z","references":null,"type":"TextField"},{"id":10,"name":"English
+        Title","uri":"","code":"english_title","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.865Z","updated_at":"2015-07-22T02:41:46.865Z","references":null,"type":"TextField"},{"id":11,"name":"Author","uri":"","code":"author","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.883Z","updated_at":"2015-07-22T02:41:46.883Z","references":null,"type":"TextField"},{"id":12,"name":"Date","uri":"","code":"date","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.903Z","updated_at":"2015-07-22T02:41:46.903Z","references":null,"type":"TextField"},{"id":13,"name":"Time","uri":"","code":"time","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.926Z","updated_at":"2015-07-22T02:41:46.926Z","references":null,"type":"TextField"},{"id":14,"name":"Size","uri":"","code":"size","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.946Z","updated_at":"2015-07-22T02:41:46.946Z","references":null,"type":"TextField"},{"id":15,"name":"Location","uri":"","code":"location","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.972Z","updated_at":"2015-07-22T02:41:46.972Z","references":null,"type":"TextField"},{"id":16,"name":"Access","uri":"","code":"access","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.991Z","updated_at":"2015-07-22T02:41:46.991Z","references":null,"type":"TextField"},{"id":17,"name":"Originals","uri":"","code":"originals","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.012Z","updated_at":"2015-07-22T02:41:47.012Z","references":null,"type":"TextField"},{"id":18,"name":"Master","uri":"","code":"master","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.034Z","updated_at":"2015-07-22T02:41:47.034Z","references":null,"type":"TextField"},{"id":19,"name":"Notes","uri":"","code":"notes","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.067Z","updated_at":"2015-07-22T02:41:47.067Z","references":null,"type":"TextField"},{"id":20,"name":"Notes
+        (cont)","uri":"","code":"notes2","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.086Z","updated_at":"2015-07-22T02:41:47.086Z","references":null,"type":"TextField"}],"name":"Talk","label_field_id":"","allow_file_bindings":true,"pool_id":2},{"id":3,"url":"/api/v1/models/3","association_fields":[],"fields":[],"name":"Sample
+        model","label_field_id":"","allow_file_bindings":true,"pool_id":2},{"id":1,"url":"/api/v1/models/1","association_fields":[],"fields":[{"id":1,"name":"Filename","uri":null,"code":"file_name","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.703Z","updated_at":"2015-07-22T01:38:25.703Z","references":null,"type":"TextField"},{"id":2,"name":"Bucket","uri":null,"code":"bucket","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.733Z","updated_at":"2015-07-22T01:38:25.733Z","references":null,"type":"TextField"},{"id":3,"name":"Storage
+        Location ID","uri":null,"code":"storage_location_id","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.737Z","updated_at":"2015-07-22T01:38:25.737Z","references":null,"type":"TextField"},{"id":4,"name":"Type
+        of File","uri":null,"code":"file_entity_type","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.740Z","updated_at":"2015-07-22T01:38:25.740Z","references":null,"type":"TextField"},{"id":5,"name":"Mime
+        Type","uri":null,"code":"mime_type","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.743Z","updated_at":"2015-07-22T01:38:25.743Z","references":null,"type":"TextField"},{"id":6,"name":"Content
+        Type","uri":null,"code":"content_type","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.747Z","updated_at":"2015-07-22T01:38:25.747Z","references":null,"type":"TextField"},{"id":7,"name":"File
+        Size","uri":null,"code":"file_size","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.750Z","updated_at":"2015-07-22T01:38:25.750Z","references":null,"type":"IntegerField"}],"name":"File
+        Entity","label_field_id":"1","allow_file_bindings":true}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 18:33:16 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/pools/2/nodes.json
+    body:
+      encoding: UTF-8
+      string: node[identity_id]=1&node[pool_id]=2&node[model_id]=2&node[data][file_name]=my%20file.xls
+    headers:
+      Access-Token:
+      - lkj0NpEb9Vs2vEGciqLe9w
+      Client:
+      - 5VL0BdUZ8EJc5OjloTjfBg
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438799595'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"3574938ff7d7642e7a89052c7907a47e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 836d6848-b1ac-4b1f-bb3d-9308c869cfc9
+      X-Runtime:
+      - '0.256765'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 18:33:16 GMT
+      Content-Length:
+      - '562'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"0aba8650-12ce-0133-ac61-38e85644ce90","data":{"file_name":"my
+        file.xls"},"persistent_id":"0aba8650-12ce-0133-ac61-38e85644ce90","parent_id":null,"pool_id":2,"identity_id":null,"created_at":"2015-07-22T18:33:16.477Z","updated_at":"2015-07-22T18:33:16.477Z","model_id":2,"binding":null,"spawned_from_node_id":null,"spawned_from_datum_id":null,"modified_by_id":1,"is_fork":false,"log":null,"pool":"kiddie_pool","identity":1,"title":"0aba8650-12ce-0133-ac61-38e85644ce90","node_version_id":2,"url":"/api/v1/pools/2/nodes/0aba8650-12ce-0133-ac61-38e85644ce90"}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 18:33:16 GMT
+recorded_with: VCR 2.9.3

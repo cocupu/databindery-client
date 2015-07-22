@@ -21,7 +21,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency('httmultiparty', '0.3.8')
   s.add_dependency('activesupport', '>=3.0')
-  s.add_development_dependency('fakeweb', '1.3.0')
+  s.add_development_dependency('faraday')
+  # s.add_development_dependency('fakeweb', '1.3.0')
   s.add_development_dependency('rspec')
 
 end

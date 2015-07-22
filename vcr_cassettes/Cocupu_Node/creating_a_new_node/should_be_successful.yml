@@ -1,0 +1,1007 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1///nodes.json
+    body:
+      encoding: UTF-8
+      string: node[identity_id]=1&node[pool_id]=2&node[model_id]=22&node[data][file_name]=my%20file.xls
+    headers:
+      Access-Token:
+      - UsTiUWhUve5VV56YUXVoYQ
+      Client:
+      - 9Y5khDU6hJtPxcOfu6VG1A
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438742705'
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '63099'
+      X-Request-Id:
+      - 3d17bb89-dbed-420d-9627-afca31245d01
+      X-Runtime:
+      - '0.578532'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 02:45:06 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
+        />\n  <title>Action Controller: Exception caught</title>\n  <style>\n    body
+        {\n      background-color: #FAFAFA;\n      color: #333;\n      margin: 0px;\n
+        \   }\n\n    body, p, ol, ul, td {\n      font-family: helvetica, verdana,
+        arial, sans-serif;\n      font-size:   13px;\n      line-height: 18px;\n    }\n\n
+        \   pre {\n      font-size: 11px;\n      white-space: pre-wrap;\n    }\n\n
+        \   pre.box {\n      border: 1px solid #EEE;\n      padding: 10px;\n      margin:
+        0px;\n      width: 958px;\n    }\n\n    header {\n      color: #F0F0F0;\n
+        \     background: #C52F24;\n      padding: 0.5em 1.5em;\n    }\n\n    h1 {\n
+        \     margin: 0.2em 0;\n      line-height: 1.1em;\n      font-size: 2em;\n
+        \   }\n\n    h2 {\n      color: #C52F24;\n      line-height: 25px;\n    }\n\n
+        \   .details {\n      border: 1px solid #D0D0D0;\n      border-radius: 4px;\n
+        \     margin: 1em 0px;\n      display: block;\n      width: 978px;\n    }\n\n
+        \   .summary {\n      padding: 8px 15px;\n      border-bottom: 1px solid #D0D0D0;\n
+        \     display: block;\n    }\n\n    .details pre {\n      margin: 5px;\n      border:
+        none;\n    }\n\n    #container {\n      box-sizing: border-box;\n      width:
+        100%;\n      padding: 0 1.5em;\n    }\n\n    .source * {\n      margin: 0px;\n
+        \     padding: 0px;\n    }\n\n    .source {\n      border: 1px solid #D9D9D9;\n
+        \     background: #ECECEC;\n      width: 978px;\n    }\n\n    .source pre
+        {\n      padding: 10px 0px;\n      border: none;\n    }\n\n    .source .data
+        {\n      font-size: 80%;\n      overflow: auto;\n      background-color: #FFF;\n
+        \   }\n\n    .info {\n      padding: 0.5em;\n    }\n\n    .source .data .line_numbers
+        {\n      background-color: #ECECEC;\n      color: #AAA;\n      padding: 1em
+        .5em;\n      border-right: 1px solid #DDD;\n      text-align: right;\n    }\n\n
+        \   .line {\n      padding-left: 10px;\n    }\n\n    .line:hover {\n      background-color:
+        #F6F6F6;\n    }\n\n    .line.active {\n      background-color: #FFCCCC;\n
+        \   }\n\n    a { color: #980905; }\n    a:visited { color: #666; }\n    a:hover
+        { color: #C52F24; }\n\n      #route_table {\n    margin: 0 auto 0;\n    border-collapse:
+        collapse;\n  }\n\n  #route_table td {\n    padding: 0 30px;\n  }\n\n  #route_table
+        tr.bottom th {\n    padding-bottom: 10px;\n    line-height: 15px;\n  }\n\n
+        \ #route_table .matched_paths {\n    background-color: LightGoldenRodYellow;\n
+        \ }\n\n  #route_table .matched_paths {\n    border-bottom: solid 3px SlateGrey;\n
+        \ }\n\n  #path_search {\n    width: 80%;\n    font-size: inherit;\n  }\n\n
+        \ </style>\n\n  <script>\n    var toggle = function(id) {\n      var s = document.getElementById(id).style;\n
+        \     s.display = s.display == 'none' ? 'block' : 'none';\n      return false;\n
+        \   }\n    var show = function(id) {\n      document.getElementById(id).style.display
+        = 'block';\n    }\n    var hide = function(id) {\n      document.getElementById(id).style.display
+        = 'none';\n    }\n    var toggleTrace = function() {\n      return toggle('blame_trace');\n
+        \   }\n    var toggleSessionDump = function() {\n      return toggle('session_dump');\n
+        \   }\n    var toggleEnvDump = function() {\n      return toggle('env_dump');\n
+        \   }\n  </script>\n</head>\n<body>\n\n<header>\n  <h1>Routing Error</h1>\n</header>\n<div
+        id=\"container\">\n  <h2>No route matches [POST] &quot;/api/v1/nodes.json&quot;</h2>\n\n
+        \ \n<p><code>Rails.root: /Users/matt/Develop/bindery/databindery-api-server</code></p>\n\n<div
+        id=\"traces\">\n    <a href=\"#\" onclick=\"hide(&#39;Framework-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Application-Trace&#39;);;
+        return false;\">Application Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Full-Trace&#39;);show(&#39;Framework-Trace&#39;);;
+        return false;\">Framework Trace</a> |\n    <a href=\"#\" onclick=\"hide(&#39;Application-Trace&#39;);hide(&#39;Framework-Trace&#39;);show(&#39;Full-Trace&#39;);;
+        return false;\">Full Trace</a> \n\n    <div id=\"Application-Trace\" style=\"display:
+        block;\">\n      <pre><code></code></pre>\n    </div>\n    <div id=\"Framework-Trace\"
+        style=\"display: none;\">\n      <pre><code>actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in
+        `call&#39;\nactionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in
+        `call&#39;\nrailties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app&#39;\nrailties
+        (4.1.8) lib/rails/rack/logger.rb:20:in `block in call&#39;\nactivesupport
+        (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;\nactivesupport
+        (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged&#39;\nactivesupport
+        (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged&#39;\nrailties
+        (4.1.8) lib/rails/rack/logger.rb:20:in `call&#39;\nactionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in
+        `call&#39;\nrack (1.5.2) lib/rack/runtime.rb:17:in `call&#39;\nactivesupport
+        (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
+        `call&#39;\nrack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nactionpack (4.1.8)
+        lib/action_dispatch/middleware/static.rb:84:in `call&#39;\nrailties (4.1.8)
+        lib/rails/engine.rb:514:in `call&#39;\nrailties (4.1.8) lib/rails/application.rb:144:in
+        `call&#39;\nrack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nrack (1.5.2) lib/rack/content_length.rb:14:in
+        `call&#39;\nrack (1.5.2) lib/rack/handler/webrick.rb:60:in `service&#39;\n/Users/matt/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in
+        `service&#39;\n/Users/matt/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in
+        `run&#39;\n/Users/matt/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in
+        `block in start_thread&#39;</code></pre>\n    </div>\n    <div id=\"Full-Trace\"
+        style=\"display: none;\">\n      <pre><code>actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in
+        `call&#39;\nactionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in
+        `call&#39;\nrailties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app&#39;\nrailties
+        (4.1.8) lib/rails/rack/logger.rb:20:in `block in call&#39;\nactivesupport
+        (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;\nactivesupport
+        (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged&#39;\nactivesupport
+        (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged&#39;\nrailties
+        (4.1.8) lib/rails/rack/logger.rb:20:in `call&#39;\nactionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in
+        `call&#39;\nrack (1.5.2) lib/rack/runtime.rb:17:in `call&#39;\nactivesupport
+        (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in
+        `call&#39;\nrack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nactionpack (4.1.8)
+        lib/action_dispatch/middleware/static.rb:84:in `call&#39;\nrailties (4.1.8)
+        lib/rails/engine.rb:514:in `call&#39;\nrailties (4.1.8) lib/rails/application.rb:144:in
+        `call&#39;\nrack (1.5.2) lib/rack/lock.rb:17:in `call&#39;\nrack (1.5.2) lib/rack/content_length.rb:14:in
+        `call&#39;\nrack (1.5.2) lib/rack/handler/webrick.rb:60:in `service&#39;\n/Users/matt/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in
+        `service&#39;\n/Users/matt/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in
+        `run&#39;\n/Users/matt/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in
+        `block in start_thread&#39;</code></pre>\n    </div>\n</div>\n\n\n    <h2>\n
+        \     Routes\n    </h2>\n\n    <p>\n      Routes match in priority from top
+        to bottom\n    </p>\n\n    \n<table id='route_table' class='route_table'>\n
+        \ <thead>\n    <tr>\n      <th>Helper</th>\n      <th>HTTP Verb</th>\n      <th>Path</th>\n
+        \     <th>Controller#Action</th>\n    </tr>\n    <tr class='bottom'>\n      <th>\n
+        \       <a data-route-helper=\"_path\" href=\"#\" title=\"Returns a relative
+        path (without the http or domain)\">Path</a> /\n        <a data-route-helper=\"_url\"
+        href=\"#\" title=\"Returns an absolute url (with the http and domain)\">Url</a>\n
+        \     </th>\n      <th>\n      </th>\n      <th>\n        <input id=\"path_search\"
+        name=\"path[]\" placeholder=\"Path Match\" type=\"search\" />\n      </th>\n
+        \     <th>\n      </th>\n    </tr>\n  </thead>\n  <tbody class='matched_paths'
+        id='matched_paths'>\n  </tbody>\n  <tbody>\n    <tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='new_login_credential_session'>\n      new_login_credential_session<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/auth/sign_in(.:format)' data-regexp='^\\/api\\/auth\\/sign_in(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/auth/sign_in(.:format)\n  </td>\n  <td data-route-reqs='devise_token_auth/sessions#new'>\n
+        \   devise_token_auth/sessions#new\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='login_credential_session'>\n      login_credential_session<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/auth/sign_in(.:format)' data-regexp='^\\/api\\/auth\\/sign_in(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/auth/sign_in(.:format)\n  </td>\n  <td data-route-reqs='devise_token_auth/sessions#create'>\n
+        \   devise_token_auth/sessions#create\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='destroy_login_credential_session'>\n
+        \     destroy_login_credential_session<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/api/auth/sign_out(.:format)'
+        data-regexp='^\\/api\\/auth\\/sign_out(?:\\.([^\\/.?]+))?$'>\n    /api/auth/sign_out(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/sessions#destroy'>\n    devise_token_auth/sessions#destroy\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='login_credential_omniauth_authorize'>\n
+        \     login_credential_omniauth_authorize<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET|POST'>\n    GET|POST\n  </td>\n  <td data-route-path='/omniauth/:provider(.:format)'
+        data-regexp='^\\/omniauth\\/(((?!)))(?:\\.([^\\/.?]+))?$'>\n    /omniauth/:provider(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/omniauth_callbacks#passthru
+        {:provider=&gt;/(?!)/}'>\n    devise_token_auth/omniauth_callbacks#passthru
+        {:provider=&gt;/(?!)/}\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='login_credential_omniauth_callback'>\n      login_credential_omniauth_callback<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET|POST'>\n
+        \   GET|POST\n  </td>\n  <td data-route-path='/omniauth/:action/callback(.:format)'
+        data-regexp='^\\/omniauth\\/(((?!)))\\/callback(?:\\.([^\\/.?]+))?$'>\n    /omniauth/:action/callback(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/omniauth_callbacks#:action'>\n
+        \   devise_token_auth/omniauth_callbacks#:action\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='login_credential_password'>\n
+        \     login_credential_password<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/auth/password(.:format)'
+        data-regexp='^\\/api\\/auth\\/password(?:\\.([^\\/.?]+))?$'>\n    /api/auth/password(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/passwords#create'>\n    devise_token_auth/passwords#create\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='new_login_credential_password'>\n
+        \     new_login_credential_password<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/password/new(.:format)'
+        data-regexp='^\\/api\\/auth\\/password\\/new(?:\\.([^\\/.?]+))?$'>\n    /api/auth/password/new(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/passwords#new'>\n    devise_token_auth/passwords#new\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='edit_login_credential_password'>\n
+        \     edit_login_credential_password<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/password/edit(.:format)'
+        data-regexp='^\\/api\\/auth\\/password\\/edit(?:\\.([^\\/.?]+))?$'>\n    /api/auth/password/edit(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/passwords#edit'>\n    devise_token_auth/passwords#edit\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/api/auth/password(.:format)'
+        data-regexp='^\\/api\\/auth\\/password(?:\\.([^\\/.?]+))?$'>\n    /api/auth/password(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/passwords#update'>\n    devise_token_auth/passwords#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/api/auth/password(.:format)'
+        data-regexp='^\\/api\\/auth\\/password(?:\\.([^\\/.?]+))?$'>\n    /api/auth/password(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/passwords#update'>\n    devise_token_auth/passwords#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='cancel_login_credential_registration'>\n
+        \     cancel_login_credential_registration<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/cancel(.:format)'
+        data-regexp='^\\/api\\/auth\\/cancel(?:\\.([^\\/.?]+))?$'>\n    /api/auth/cancel(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/registrations#cancel'>\n
+        \   devise_token_auth/registrations#cancel\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='login_credential_registration'>\n
+        \     login_credential_registration<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/auth(.:format)'
+        data-regexp='^\\/api\\/auth(?:\\.([^\\/.?]+))?$'>\n    /api/auth(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/registrations#create'>\n
+        \   devise_token_auth/registrations#create\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='new_login_credential_registration'>\n
+        \     new_login_credential_registration<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/sign_up(.:format)'
+        data-regexp='^\\/api\\/auth\\/sign_up(?:\\.([^\\/.?]+))?$'>\n    /api/auth/sign_up(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/registrations#new'>\n    devise_token_auth/registrations#new\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='edit_login_credential_registration'>\n
+        \     edit_login_credential_registration<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/edit(.:format)'
+        data-regexp='^\\/api\\/auth\\/edit(?:\\.([^\\/.?]+))?$'>\n    /api/auth/edit(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/registrations#edit'>\n    devise_token_auth/registrations#edit\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/api/auth(.:format)'
+        data-regexp='^\\/api\\/auth(?:\\.([^\\/.?]+))?$'>\n    /api/auth(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/registrations#update'>\n
+        \   devise_token_auth/registrations#update\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n
+        \   PUT\n  </td>\n  <td data-route-path='/api/auth(.:format)' data-regexp='^\\/api\\/auth(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/auth(.:format)\n  </td>\n  <td data-route-reqs='devise_token_auth/registrations#update'>\n
+        \   devise_token_auth/registrations#update\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n
+        \   DELETE\n  </td>\n  <td data-route-path='/api/auth(.:format)' data-regexp='^\\/api\\/auth(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/auth(.:format)\n  </td>\n  <td data-route-reqs='devise_token_auth/registrations#destroy'>\n
+        \   devise_token_auth/registrations#destroy\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='login_credential_confirmation'>\n
+        \     login_credential_confirmation<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/auth/confirmation(.:format)'
+        data-regexp='^\\/api\\/auth\\/confirmation(?:\\.([^\\/.?]+))?$'>\n    /api/auth/confirmation(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/confirmations#create'>\n
+        \   devise_token_auth/confirmations#create\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='new_login_credential_confirmation'>\n
+        \     new_login_credential_confirmation<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/confirmation/new(.:format)'
+        data-regexp='^\\/api\\/auth\\/confirmation\\/new(?:\\.([^\\/.?]+))?$'>\n    /api/auth/confirmation/new(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/confirmations#new'>\n    devise_token_auth/confirmations#new\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/confirmation(.:format)'
+        data-regexp='^\\/api\\/auth\\/confirmation(?:\\.([^\\/.?]+))?$'>\n    /api/auth/confirmation(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/confirmations#show'>\n    devise_token_auth/confirmations#show\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='validate_token'>\n
+        \     validate_token<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/auth/validate_token(.:format)'
+        data-regexp='^\\/api\\/auth\\/validate_token(?:\\.([^\\/.?]+))?$'>\n    /api/auth/validate_token(.:format)\n
+        \ </td>\n  <td data-route-reqs='devise_token_auth/token_validations#validate_token'>\n
+        \   devise_token_auth/token_validations#validate_token\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='failure'>\n
+        \     failure<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/auth/failure(.:format)' data-regexp='^\\/api\\/auth\\/failure(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/auth/failure(.:format)\n  </td>\n  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_failure'>\n
+        \   devise_token_auth/omniauth_callbacks#omniauth_failure\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/:provider/callback(.:format)'
+        data-regexp='^\\/api\\/auth\\/([^\\/.?]+)\\/callback(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/auth/:provider/callback(.:format)\n  </td>\n  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_success'>\n
+        \   devise_token_auth/omniauth_callbacks#omniauth_success\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name=''>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/auth/:provider(.:format)'
+        data-regexp='^\\/api\\/auth\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n    /api/auth/:provider(.:format)\n
+        \ </td>\n  <td data-route-reqs='redirect(301)'>\n    redirect(301)\n  </td>\n</tr>\n<tr
+        class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_identities'>\n
+        \     api_v1_identities<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/v1/identities(.:format)' data-regexp='^\\/api\\/v1\\/identities(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/identities(.:format)\n  </td>\n  <td data-route-reqs='api/v1/identities#index'>\n
+        \   api/v1/identities#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_identity'>\n      api_v1_identity<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/identities/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/identities\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/identities/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/identities#show'>\n
+        \   api/v1/identities#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_models'>\n      api_v1_models<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/models(.:format)'
+        data-regexp='^\\/api\\/v1\\/models(?:\\.([^\\/.?]+))?$'>\n    /api/v1/models(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/models#index'>\n    api/v1/models#index\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/v1/models(.:format)'
+        data-regexp='^\\/api\\/v1\\/models(?:\\.([^\\/.?]+))?$'>\n    /api/v1/models(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/models#create'>\n    api/v1/models#create\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_model'>\n
+        \     api_v1_model<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/v1/models/:id(.:format)' data-regexp='^\\/api\\/v1\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#show'>\n
+        \   api/v1/models#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/models/:id(.:format)' data-regexp='^\\/api\\/v1\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#update'>\n
+        \   api/v1/models#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/models/:id(.:format)' data-regexp='^\\/api\\/v1\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#update'>\n
+        \   api/v1/models#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/models/:id(.:format)' data-regexp='^\\/api\\/v1\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#destroy'>\n
+        \   api/v1/models#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_fields'>\n      api_v1_fields<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/fields(.:format)'
+        data-regexp='^\\/api\\/v1\\/fields(?:\\.([^\\/.?]+))?$'>\n    /api/v1/fields(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/fields#index'>\n    api/v1/fields#index\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/v1/fields(.:format)'
+        data-regexp='^\\/api\\/v1\\/fields(?:\\.([^\\/.?]+))?$'>\n    /api/v1/fields(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/fields#create'>\n    api/v1/fields#create\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_field'>\n
+        \     api_v1_field<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/v1/fields/:id(.:format)' data-regexp='^\\/api\\/v1\\/fields\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/fields/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/fields#show'>\n
+        \   api/v1/fields#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/fields/:id(.:format)' data-regexp='^\\/api\\/v1\\/fields\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/fields/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/fields#update'>\n
+        \   api/v1/fields#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/fields/:id(.:format)' data-regexp='^\\/api\\/v1\\/fields\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/fields/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/fields#update'>\n
+        \   api/v1/fields#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/fields/:id(.:format)' data-regexp='^\\/api\\/v1\\/fields\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/fields/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/fields#destroy'>\n
+        \   api/v1/fields#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='history_api_v1_pool_node'>\n      history_api_v1_pool_node<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/:id/history(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/([^\\/.?]+)\\/history(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/:id/history(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#history'>\n
+        \   api/v1/nodes#history\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='search_api_v1_pool_nodes'>\n      search_api_v1_pool_nodes<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/search(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/search(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/search(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#search'>\n
+        \   api/v1/nodes#search\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='find_or_create_api_v1_pool_nodes'>\n      find_or_create_api_v1_pool_nodes<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/find_or_create(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/find_or_create(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/find_or_create(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/nodes#find_or_create'>\n    api/v1/nodes#find_or_create\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='import_api_v1_pool_nodes'>\n
+        \     import_api_v1_pool_nodes<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/import(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/import(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/import(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#import'>\n
+        \   api/v1/nodes#import\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_node_files'>\n      api_v1_pool_node_files<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/:node_id/files(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/([^\\/.?]+)\\/files(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/:node_id/files(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/nodes#attach_file'>\n    api/v1/nodes#attach_file\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool_nodes'>\n
+        \     api_v1_pool_nodes<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#index'>\n
+        \   api/v1/nodes#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#create'>\n
+        \   api/v1/nodes#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_node'>\n      api_v1_pool_node<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#show'>\n
+        \   api/v1/nodes#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#update'>\n
+        \   api/v1/nodes#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#update'>\n
+        \   api/v1/nodes#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/nodes/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/nodes\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/nodes/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/nodes#destroy'>\n
+        \   api/v1/nodes#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_models'>\n      api_v1_pool_models<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/models(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/models(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/models(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#index'>\n
+        \   api/v1/models#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/models(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/models(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/models(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#create'>\n
+        \   api/v1/models#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_model'>\n      api_v1_pool_model<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/models/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#show'>\n
+        \   api/v1/models#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/models/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#update'>\n
+        \   api/v1/models#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/models/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#update'>\n
+        \   api/v1/models#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/models/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/models\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/models/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/models#destroy'>\n
+        \   api/v1/models#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_audience_category_audiences'>\n      api_v1_pool_audience_category_audiences<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)\\/audiences(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/audiences#index'>\n    api/v1/audiences#index\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)\\/audiences(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/audiences#create'>\n    api/v1/audiences#create\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool_audience_category_audience'>\n
+        \     api_v1_pool_audience_category_audience<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)\\/audiences\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/audiences#show'>\n    api/v1/audiences#show\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)\\/audiences\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/audiences#update'>\n    api/v1/audiences#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)\\/audiences\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/audiences#update'>\n    api/v1/audiences#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)\\/audiences\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:audience_category_id/audiences/:id(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/audiences#destroy'>\n    api/v1/audiences#destroy\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool_audience_categories'>\n
+        \     api_v1_pool_audience_categories<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories(.:format)\n  </td>\n  <td data-route-reqs='api/v1/audience_categories#index'>\n
+        \   api/v1/audience_categories#index\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n
+        \   POST\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories(.:format)\n  </td>\n  <td data-route-reqs='api/v1/audience_categories#create'>\n
+        \   api/v1/audience_categories#create\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='api_v1_pool_audience_category'>\n
+        \     api_v1_pool_audience_category<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/audience_categories#show'>\n    api/v1/audience_categories#show\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/audience_categories#update'>\n    api/v1/audience_categories#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/audience_categories#update'>\n    api/v1/audience_categories#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/audience_categories/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/audience_categories\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/audience_categories/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/audience_categories#destroy'>\n    api/v1/audience_categories#destroy\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='s3_upload_info_api_v1_pool_file_entities'>\n
+        \     s3_upload_info_api_v1_pool_file_entities<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/file_entities/s3_upload_info(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/file_entities\\/s3_upload_info(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/file_entities/s3_upload_info(.:format)\n  </td>\n
+        \ <td data-route-reqs='api/v1/file_entities#s3_upload_info'>\n    api/v1/file_entities#s3_upload_info\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool_file_entities'>\n
+        \     api_v1_pool_file_entities<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/file_entities(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/file_entities(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/file_entities(.:format)\n  </td>\n  <td data-route-reqs='api/v1/file_entities#index'>\n
+        \   api/v1/file_entities#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/file_entities(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/file_entities(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/file_entities(.:format)\n  </td>\n  <td data-route-reqs='api/v1/file_entities#create'>\n
+        \   api/v1/file_entities#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_file_entity'>\n      api_v1_pool_file_entity<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/file_entities/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/file_entities\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/file_entities/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/file_entities#show'>\n
+        \   api/v1/file_entities#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/file_entities/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/file_entities\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/file_entities/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/file_entities#update'>\n
+        \   api/v1/file_entities#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/file_entities/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/file_entities\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/file_entities/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/file_entities#update'>\n
+        \   api/v1/file_entities#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/file_entities/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/file_entities\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/file_entities/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/file_entities#destroy'>\n
+        \   api/v1/file_entities#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_mapping_templates'>\n      api_v1_pool_mapping_templates<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/mapping_templates(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/mapping_templates(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/mapping_templates(.:format)\n  </td>\n  <td data-route-reqs='api/v1/mapping_templates#index'>\n
+        \   api/v1/mapping_templates#index\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n
+        \   POST\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/mapping_templates(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/mapping_templates(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/mapping_templates(.:format)\n  </td>\n  <td data-route-reqs='api/v1/mapping_templates#create'>\n
+        \   api/v1/mapping_templates#create\n  </td>\n</tr>\n<tr class='route_row'
+        data-helper='path'>\n  <td data-route-name='api_v1_pool_mapping_template'>\n
+        \     api_v1_pool_mapping_template<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/mapping_templates/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/mapping_templates\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/mapping_templates/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/mapping_templates#show'>\n    api/v1/mapping_templates#show\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/mapping_templates/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/mapping_templates\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/mapping_templates/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/mapping_templates#update'>\n    api/v1/mapping_templates#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='PUT'>\n    PUT\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/mapping_templates/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/mapping_templates\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/mapping_templates/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/mapping_templates#update'>\n    api/v1/mapping_templates#update\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/mapping_templates/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/mapping_templates\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/mapping_templates/:id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/mapping_templates#destroy'>\n    api/v1/mapping_templates#destroy\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool_spawn_jobs'>\n
+        \     api_v1_pool_spawn_jobs<span class='helper'>_path</span>\n  </td>\n  <td
+        data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spawn_jobs(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spawn_jobs(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spawn_jobs(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spawn_jobs#index'>\n
+        \   api/v1/spawn_jobs#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spawn_jobs(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spawn_jobs(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spawn_jobs(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spawn_jobs#create'>\n
+        \   api/v1/spawn_jobs#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_spawn_job'>\n      api_v1_pool_spawn_job<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spawn_jobs/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spawn_jobs\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spawn_jobs/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spawn_jobs#show'>\n
+        \   api/v1/spawn_jobs#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spawn_jobs/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spawn_jobs\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spawn_jobs/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spawn_jobs#update'>\n
+        \   api/v1/spawn_jobs#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spawn_jobs/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spawn_jobs\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spawn_jobs/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spawn_jobs#update'>\n
+        \   api/v1/spawn_jobs#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spawn_jobs/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spawn_jobs\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spawn_jobs/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spawn_jobs#destroy'>\n
+        \   api/v1/spawn_jobs#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_spreadsheets'>\n      api_v1_pool_spreadsheets<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spreadsheets(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spreadsheets(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spreadsheets(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spreadsheets#index'>\n
+        \   api/v1/spreadsheets#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spreadsheets(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spreadsheets(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spreadsheets(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spreadsheets#create'>\n
+        \   api/v1/spreadsheets#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_spreadsheet'>\n      api_v1_pool_spreadsheet<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spreadsheets/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spreadsheets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spreadsheets/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spreadsheets#show'>\n
+        \   api/v1/spreadsheets#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spreadsheets/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spreadsheets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spreadsheets/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spreadsheets#update'>\n
+        \   api/v1/spreadsheets#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spreadsheets/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spreadsheets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spreadsheets/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spreadsheets#update'>\n
+        \   api/v1/spreadsheets#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/spreadsheets/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/spreadsheets\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/spreadsheets/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/spreadsheets#destroy'>\n
+        \   api/v1/spreadsheets#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='pool_data_facet_api_v1_pool_data'>\n      pool_data_facet_api_v1_pool_data<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data/facet/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data\\/facet\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data/facet/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#facet'>\n
+        \   api/v1/pool_data#facet\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='pool_data_overview_api_v1_pool_data'>\n      pool_data_overview_api_v1_pool_data<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data/overview(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data\\/overview(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data/overview(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#overview'>\n
+        \   api/v1/pool_data#overview\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_data'>\n      api_v1_pool_data<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#index'>\n
+        \   api/v1/pool_data#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#create'>\n
+        \   api/v1/pool_data#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_datum'>\n      api_v1_pool_datum<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#show'>\n
+        \   api/v1/pool_data#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#update'>\n
+        \   api/v1/pool_data#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#update'>\n
+        \   api/v1/pool_data#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/data/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/data\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/data/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pool_data#destroy'>\n
+        \   api/v1/pool_data#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_exhibit_data'>\n      api_v1_pool_exhibit_data<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/exhibits/:exhibit_id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/exhibits\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/exhibits/:exhibit_id(.:format)\n  </td>\n  <td
+        data-route-reqs='api/v1/exhibit_data#index'>\n    api/v1/exhibit_data#index\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool_exhibit_facet'>\n
+        \     api_v1_pool_exhibit_facet<span class='helper'>_path</span>\n  </td>\n
+        \ <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/exhibits/:exhibit_id/facet/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/exhibits\\/([^\\/.?]+)\\/facet\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/exhibits/:exhibit_id/facet/:id(.:format)\n  </td>\n
+        \ <td data-route-reqs='api/v1/exhibit_data#facet'>\n    api/v1/exhibit_data#facet\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool_exhibits'>\n
+        \     api_v1_pool_exhibits<span class='helper'>_path</span>\n  </td>\n  <td
+        data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools/:pool_id/exhibits(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/exhibits(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/exhibits(.:format)\n  </td>\n  <td data-route-reqs='api/v1/exhibits#index'>\n
+        \   api/v1/exhibits#index\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='POST'>\n    POST\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/exhibits(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/exhibits(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/exhibits(.:format)\n  </td>\n  <td data-route-reqs='api/v1/exhibits#create'>\n
+        \   api/v1/exhibits#create\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pool_exhibit'>\n      api_v1_pool_exhibit<span
+        class='helper'>_path</span>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/exhibits/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/exhibits\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/exhibits/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/exhibits#update'>\n
+        \   api/v1/exhibits#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/exhibits/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/exhibits\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/exhibits/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/exhibits#update'>\n
+        \   api/v1/exhibits#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:pool_id/exhibits/:id(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)\\/exhibits\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:pool_id/exhibits/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/exhibits#destroy'>\n
+        \   api/v1/exhibits#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name='api_v1_pools'>\n      api_v1_pools<span class='helper'>_path</span>\n
+        \ </td>\n  <td data-route-verb='GET'>\n    GET\n  </td>\n  <td data-route-path='/api/v1/pools(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools(?:\\.([^\\/.?]+))?$'>\n    /api/v1/pools(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/pools#index'>\n    api/v1/pools#index\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name=''>\n
+        \ </td>\n  <td data-route-verb='POST'>\n    POST\n  </td>\n  <td data-route-path='/api/v1/pools(.:format)'
+        data-regexp='^\\/api\\/v1\\/pools(?:\\.([^\\/.?]+))?$'>\n    /api/v1/pools(.:format)\n
+        \ </td>\n  <td data-route-reqs='api/v1/pools#create'>\n    api/v1/pools#create\n
+        \ </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n  <td data-route-name='api_v1_pool'>\n
+        \     api_v1_pool<span class='helper'>_path</span>\n  </td>\n  <td data-route-verb='GET'>\n
+        \   GET\n  </td>\n  <td data-route-path='/api/v1/pools/:id(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pools#show'>\n
+        \   api/v1/pools#show\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PATCH'>\n    PATCH\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:id(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pools#update'>\n
+        \   api/v1/pools#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='PUT'>\n    PUT\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:id(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pools#update'>\n
+        \   api/v1/pools#update\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='DELETE'>\n    DELETE\n
+        \ </td>\n  <td data-route-path='/api/v1/pools/:id(.:format)' data-regexp='^\\/api\\/v1\\/pools\\/([^\\/.?]+)(?:\\.([^\\/.?]+))?$'>\n
+        \   /api/v1/pools/:id(.:format)\n  </td>\n  <td data-route-reqs='api/v1/pools#destroy'>\n
+        \   api/v1/pools#destroy\n  </td>\n</tr>\n<tr class='route_row' data-helper='path'>\n
+        \ <td data-route-name=''>\n  </td>\n  <td data-route-verb='GET'>\n    GET\n
+        \ </td>\n  <td data-route-path='/omniauth/:provider/callback(.:format)' data-regexp='^\\/omniauth\\/([^\\/.?]+)\\/callback(?:\\.([^\\/.?]+))?$'>\n
+        \   /omniauth/:provider/callback(.:format)\n  </td>\n  <td data-route-reqs='devise_token_auth/omniauth_callbacks#redirect_callbacks'>\n
+        \   devise_token_auth/omniauth_callbacks#redirect_callbacks\n  </td>\n</tr>\n\n
+        \ </tbody>\n</table>\n\n<script type='text/javascript'>\n  function each(elems,
+        func) {\n    if (!elems instanceof Array) { elems = [elems]; }\n    for (var
+        i = 0, len = elems.length; i < len; i++) {\n      func(elems[i]);\n    }\n
+        \ }\n\n  function setValOn(elems, val) {\n    each(elems, function(elem) {\n
+        \     elem.innerHTML = val;\n    });\n  }\n\n  function onClick(elems, func)
+        {\n    each(elems, function(elem) {\n      elem.onclick = func;\n    });\n
+        \ }\n\n  // Enables functionality to toggle between `_path` and `_url` helper
+        suffixes\n  function setupRouteToggleHelperLinks() {\n    var toggleLinks
+        = document.querySelectorAll('#route_table [data-route-helper]');\n    onClick(toggleLinks,
+        function(){\n      var helperTxt   = this.getAttribute(\"data-route-helper\"),\n
+        \         helperElems = document.querySelectorAll('[data-route-name] span.helper');\n
+        \     setValOn(helperElems, helperTxt);\n    });\n  }\n\n  // takes an array
+        of elements with a data-regexp attribute and\n  // passes their parent <tr>
+        into the callback function\n  // if the regexp matches a given path\n  function
+        eachElemsForPath(elems, path, func) {\n    each(elems, function(e){\n      var
+        reg = e.getAttribute(\"data-regexp\");\n      if (path.match(RegExp(reg)))
+        {\n        func(e.parentNode.cloneNode(true));\n      }\n    })\n  }\n\n  //
+        Ensure path always starts with a slash \"/\" and remove params or fragments\n
+        \ function sanitizePath(path) {\n    var path = path.charAt(0) == '/' ? path
+        : \"/\" + path;\n    return path.replace(/\\#.*|\\?.*/, '');\n  }\n\n  //
+        Enables path search functionality\n  function setupMatchPaths() {\n    var
+        regexpElems     = document.querySelectorAll('#route_table [data-regexp]'),\n
+        \       pathElem        = document.querySelector('#path_search'),\n        selectedSection
+        = document.querySelector('#matched_paths'),\n        noMatchText     = '<tr><th
+        colspan=\"4\">None</th></tr>';\n\n\n    // Remove matches if no path is present\n
+        \   pathElem.onblur = function(e) {\n      if (pathElem.value === \"\") selectedSection.innerHTML
+        = \"\";\n    }\n\n    // On key press perform a search for matching paths\n
+        \   pathElem.onkeyup = function(e){\n      var path        = sanitizePath(pathElem.value),\n
+        \         defaultText = '<tr><th colspan=\"4\">Paths Matching (' + escape(path)
+        + '):</th></tr>';\n\n      // Clear out results section\n      selectedSection.innerHTML=
+        defaultText;\n\n      // Display matches if they exist\n      eachElemsForPath(regexpElems,
+        path, function(e){\n        selectedSection.appendChild(e);\n      });\n\n
+        \     // If no match present, tell the user\n      if (selectedSection.innerHTML
+        === defaultText) {\n        selectedSection.innerHTML = selectedSection.innerHTML
+        + noMatchText;\n      }\n    }\n  }\n\n  setupMatchPaths();\n  setupRouteToggleHelperLinks();\n</script>\n\n</div>\n\n\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 02:45:06 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/auth/sign_in.json
+    body:
+      encoding: UTF-8
+      string: email=justin%40cocupu.com&password=password
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Token:
+      - 9kahu2S3_85PbdrOlLWwHQ
+      Token-Type:
+      - Bearer
+      Client:
+      - 7VKf9leE3c3UhfeNqDZGzA
+      Expiry:
+      - '1438802066'
+      Uid:
+      - justin@cocupu.com
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4d0d17d523d25989485843a82fab2055"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0a0e7ae3-a243-4acc-b86d-3c68686d057c
+      X-Runtime:
+      - '1.430873'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 19:14:27 GMT
+      Content-Length:
+      - '131'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":1,"provider":"email","uid":"justin@cocupu.com","name":null,"nickname":null,"image":null,"email":"justin@cocupu.com"}}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 19:14:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/identities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - 9kahu2S3_85PbdrOlLWwHQ
+      Client:
+      - 7VKf9leE3c3UhfeNqDZGzA
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438802066'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1a3d10b744ff501f59c201cae9073195"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aadc197c-08e3-4a00-829f-00bce6c621a3
+      X-Runtime:
+      - '0.605596'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 19:14:27 GMT
+      Content-Length:
+      - '149'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":null,"created_at":"2015-07-21T22:57:47.512Z","updated_at":"2015-07-21T22:57:47.512Z","short_name":null,"url":"/api/v1/identities/1"}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 19:14:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/pools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - 9kahu2S3_85PbdrOlLWwHQ
+      Client:
+      - 7VKf9leE3c3UhfeNqDZGzA
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438802066'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"a6fa60af519c2ad599cd2412f36b5d08"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fe2f3b58-e0c1-4bec-89c0-3fff8ac28732
+      X-Runtime:
+      - '1.107913'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 19:14:28 GMT
+      Content-Length:
+      - '108'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":2,"short_name":"kiddie_pool","name":null,"description":null,"identity":null,"url":"/api/v1/pools/2"}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 19:14:28 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/pools/2/models.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - 9kahu2S3_85PbdrOlLWwHQ
+      Client:
+      - 7VKf9leE3c3UhfeNqDZGzA
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438802066'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1d8d0c128ab4bc03175806b1b4509d67"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7a41441a-33b5-40c2-b233-ca70ef8b5b87
+      X-Runtime:
+      - '2.068908'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 19:14:31 GMT
+      Content-Length:
+      - '4527'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":2,"url":"/api/v1/models/2","association_fields":[],"fields":[{"id":8,"name":"File
+        Name","uri":"","code":"file_name","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.813Z","updated_at":"2015-07-22T02:41:46.813Z","references":null,"type":"TextField"},{"id":9,"name":"Tibetan
+        Title","uri":"","code":"tibetan_title","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.843Z","updated_at":"2015-07-22T02:41:46.843Z","references":null,"type":"TextField"},{"id":10,"name":"English
+        Title","uri":"","code":"english_title","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.865Z","updated_at":"2015-07-22T02:41:46.865Z","references":null,"type":"TextField"},{"id":11,"name":"Author","uri":"","code":"author","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.883Z","updated_at":"2015-07-22T02:41:46.883Z","references":null,"type":"TextField"},{"id":12,"name":"Date","uri":"","code":"date","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.903Z","updated_at":"2015-07-22T02:41:46.903Z","references":null,"type":"TextField"},{"id":13,"name":"Time","uri":"","code":"time","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.926Z","updated_at":"2015-07-22T02:41:46.926Z","references":null,"type":"TextField"},{"id":14,"name":"Size","uri":"","code":"size","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.946Z","updated_at":"2015-07-22T02:41:46.946Z","references":null,"type":"TextField"},{"id":15,"name":"Location","uri":"","code":"location","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.972Z","updated_at":"2015-07-22T02:41:46.972Z","references":null,"type":"TextField"},{"id":16,"name":"Access","uri":"","code":"access","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:46.991Z","updated_at":"2015-07-22T02:41:46.991Z","references":null,"type":"TextField"},{"id":17,"name":"Originals","uri":"","code":"originals","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.012Z","updated_at":"2015-07-22T02:41:47.012Z","references":null,"type":"TextField"},{"id":18,"name":"Master","uri":"","code":"master","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.034Z","updated_at":"2015-07-22T02:41:47.034Z","references":null,"type":"TextField"},{"id":19,"name":"Notes","uri":"","code":"notes","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.067Z","updated_at":"2015-07-22T02:41:47.067Z","references":null,"type":"TextField"},{"id":20,"name":"Notes
+        (cont)","uri":"","code":"notes2","label":null,"multivalue":null,"created_at":"2015-07-22T02:41:47.086Z","updated_at":"2015-07-22T02:41:47.086Z","references":null,"type":"TextField"}],"name":"Talk","label_field_id":"","allow_file_bindings":true,"pool_id":2},{"id":3,"url":"/api/v1/models/3","association_fields":[],"fields":[],"name":"Sample
+        model","label_field_id":"","allow_file_bindings":true,"pool_id":2},{"id":1,"url":"/api/v1/models/1","association_fields":[],"fields":[{"id":1,"name":"Filename","uri":null,"code":"file_name","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.703Z","updated_at":"2015-07-22T01:38:25.703Z","references":null,"type":"TextField"},{"id":2,"name":"Bucket","uri":null,"code":"bucket","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.733Z","updated_at":"2015-07-22T01:38:25.733Z","references":null,"type":"TextField"},{"id":3,"name":"Storage
+        Location ID","uri":null,"code":"storage_location_id","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.737Z","updated_at":"2015-07-22T01:38:25.737Z","references":null,"type":"TextField"},{"id":4,"name":"Type
+        of File","uri":null,"code":"file_entity_type","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.740Z","updated_at":"2015-07-22T01:38:25.740Z","references":null,"type":"TextField"},{"id":5,"name":"Mime
+        Type","uri":null,"code":"mime_type","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.743Z","updated_at":"2015-07-22T01:38:25.743Z","references":null,"type":"TextField"},{"id":6,"name":"Content
+        Type","uri":null,"code":"content_type","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.747Z","updated_at":"2015-07-22T01:38:25.747Z","references":null,"type":"TextField"},{"id":7,"name":"File
+        Size","uri":null,"code":"file_size","label":null,"multivalue":null,"created_at":"2015-07-22T01:38:25.750Z","updated_at":"2015-07-22T01:38:25.750Z","references":null,"type":"IntegerField"}],"name":"File
+        Entity","label_field_id":"1","allow_file_bindings":true}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 19:14:31 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/pools/2/nodes.json
+    body:
+      encoding: UTF-8
+      string: node[identity_id]=1&node[pool_id]=2&node[model_id]=2&node[url]=%2Fpools%2F2%2Fnodes&node[data][file_name]=my%20file.xls
+    headers:
+      Access-Token:
+      - 9kahu2S3_85PbdrOlLWwHQ
+      Client:
+      - 7VKf9leE3c3UhfeNqDZGzA
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438802066'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1f5b86b63ae5ae84195c69dc99caa2d9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8448975f-4119-4563-9f44-4f1d6a6c756b
+      X-Runtime:
+      - '1.228023'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 19:14:32 GMT
+      Content-Length:
+      - '563'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"ce3c1990-12d3-0133-ac69-38e85644ce90","data":{"file_name":"my
+        file.xls"},"persistent_id":"ce3c1990-12d3-0133-ac69-38e85644ce90","parent_id":null,"pool_id":2,"identity_id":null,"created_at":"2015-07-22T19:14:31.955Z","updated_at":"2015-07-22T19:14:31.955Z","model_id":2,"binding":null,"spawned_from_node_id":null,"spawned_from_datum_id":null,"modified_by_id":1,"is_fork":false,"log":null,"pool":"kiddie_pool","identity":1,"title":"ce3c1990-12d3-0133-ac69-38e85644ce90","node_version_id":13,"url":"/api/v1/pools/2/nodes/ce3c1990-12d3-0133-ac69-38e85644ce90"}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 19:14:32 GMT
+recorded_with: VCR 2.9.3

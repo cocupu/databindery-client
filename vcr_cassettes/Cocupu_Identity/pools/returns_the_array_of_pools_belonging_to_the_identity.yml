@@ -1,0 +1,146 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/auth/sign_in.json
+    body:
+      encoding: UTF-8
+      string: email=justin%40cocupu.com&password=password
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Access-Token:
+      - lTuhnGCm6DOmO0JMKs5OAw
+      Token-Type:
+      - Bearer
+      Client:
+      - k-jVnOr_WH_9UY32vBJRRA
+      Expiry:
+      - '1438737908'
+      Uid:
+      - justin@cocupu.com
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4d0d17d523d25989485843a82fab2055"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 02f2bf0f-6633-4b74-9ef5-102c35d9d549
+      X-Runtime:
+      - '0.255010'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 01:25:08 GMT
+      Content-Length:
+      - '131'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":1,"provider":"email","uid":"justin@cocupu.com","name":null,"nickname":null,"image":null,"email":"justin@cocupu.com"}}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 01:25:08 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/identities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - lTuhnGCm6DOmO0JMKs5OAw
+      Client:
+      - k-jVnOr_WH_9UY32vBJRRA
+      Uid:
+      - justin@cocupu.com
+      Expiry:
+      - '1438737908'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"1a3d10b744ff501f59c201cae9073195"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 269f59c3-4b41-4238-9cd1-7a59562af456
+      X-Runtime:
+      - '0.095677'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 01:25:08 GMT
+      Content-Length:
+      - '149'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":null,"created_at":"2015-07-21T22:57:47.512Z","updated_at":"2015-07-21T22:57:47.512Z","short_name":null,"url":"/api/v1/identities/1"}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 01:25:08 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/pools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e519395e-3bad-4afd-b459-1be333ffff26
+      X-Runtime:
+      - '0.005407'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.5/2014-11-13)
+      Date:
+      - Wed, 22 Jul 2015 01:25:08 GMT
+      Content-Length:
+      - '2'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '[{"id":4096, "url":"/api/v1/pools/4096", "name":null, "owner_id":1, "created_at":"2015-07-22T00:33:35.891Z", "updated_at":"2015-07-22T00:33:35.891Z", "head_id":null, "short_name":"kiddie_pool", "description":null, "chosen_default_perspective_id":null, "persistent_id":"367f0360-1237-0133-ac5f-38e85644ce90", "identity":1, "access_controls":[]},{"id":4097,"short_name":"adult_swim"},{"id":4098,"short_name":"lap_pool"},{"id":4099,"short_name":"infinity_pool"}]'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 01:25:08 GMT
+recorded_with: VCR 2.9.3
+
+
