@@ -30,6 +30,20 @@ describe Cocupu::Node, vcr: true do
     end
   end
 
+  describe "import" do
+    let(:conn)      { double("connection") }
+    let(:pool)      { Cocupu::Pool.new({"url"=>"/pools/2"}, conn) }
+    let(:model)     { Cocupu::Model.new({'identity_id' =>"fooIdentity", 'pool_id'=>pool.id, 'name'=>"Talk"}) }
+    before do
+      allow(Thread).to receive(:current).and_return(cocupu_connection: conn)
+    end
+    it "allows you to specify a key to match on" do
+      data = {'my-identifier'=>'cfTT98f'}
+      expect(conn).to receive(:post).with("/pools/#{pool.id}/nodes/import.json", body: {model_id:model.id, data: data, key: 'my-identifier'})
+      Cocupu::Node.import('pool_id'=>pool.id, 'model_id' => model.id, 'data' => data, 'key' => 'my-identifier')
+    end
+  end
+
   describe "attach_file" do
     let(:node)            { Cocupu::Node.create({'identity_id'=>identity.id, 'pool_id'=>pool.id, 'model_id' => model.id, 'data' => {'file_name'=>'my file.xls'}}) }
     let(:attached_file)   { node.attach_file('my_file_name', File.open('./spec/unit/node_spec.rb')) }

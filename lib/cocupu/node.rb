@@ -73,7 +73,9 @@ module Cocupu
       conn = Thread.current[:cocupu_connection]
       pool_id = values["pool_id"]
       model_id = values["model_id"]
-      conn.post("/pools/#{pool_id}/nodes/import.json", body: {model_id:model_id, data: values["data"]})
+      post_params = {model_id:model_id, data: values["data"]}
+      post_params[:key] = values["key"] if values["key"]
+      conn.post("/pools/#{pool_id}/nodes/import.json", body: post_params)
     end
 
     def model_id
